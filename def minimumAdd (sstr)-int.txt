@@ -1,0 +1,12 @@
+def minimumAdd (s:str)->int 
+	l=[]
+	count=0
+	for bracket in s:
+		if bracket=="(":
+			l.append(bracket)
+		elif bracket==")" and l and l[-1]=="(":
+			l.pop
+		else:
+			count+=1
+	return len(l)+count
+	
